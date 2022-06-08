@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html onkeypress="displayKeyCode(event)">
 
 <head>
     <script>
-  
+        function displayKeyCode(event) {
+            document.getElementById("msg").innerHTML = event.keyCode;
+            console.log("hi");
+        }
     </script>
 
 </head>
 
 <body>
+        <p>Click on this page, and press a key on your keyboard to display the keycode.</p>
 
-    <p>Click on this page, and press a key on your keyboard to display the keycode.</p>
-
-    <p id="msg" style="font-size:20em;"></p>
-
+        <p id="msg" style="font-size:20em;"></p>
+  
 </body>
 
 </html>

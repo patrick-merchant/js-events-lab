@@ -9,6 +9,7 @@
         Implement the function:
         get paragraph with id "message" and set it's text to "A simple message :)"
       */
+     document.querySelector('#message').innerText = "A simple message :)";
     }
   </script>
 </head>
@@ -16,7 +17,7 @@
 <body>
   <h2>JavaScript HTML Events - on select</h2>
   <!-- TODO use onselect event to call myFunction -->
-  <input type="text" value="Hello world!">
+  <input type="text" value="Hello world!" onselect="myFunction()">
   <p>When the text is selected, a simple message is displayed.</p>
   <p id="message"></p>
 

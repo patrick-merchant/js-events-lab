@@ -3,13 +3,18 @@
 
 <head>
     <script>
-
+        function displayCoordinates() {
+            let x = event.clientX;
+            let y = event.clientY;
+            let coor = `X = "${x}" <br> Y = "${y}"`;
+            document.getElementById("msg").innerHTML = coor;
+        }
     </script>
 </head>
 
 <body>
 
-    <div style="background-color:royalblue; width:450px;height:200px;"></div>
+    <div style="background-color:royalblue; width:450px;height:200px;" onclick="displayCoordinates()"></div>
 
     <p>
         Click the above div, to display the x and y coordinates of the cursor.
