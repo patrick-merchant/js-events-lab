@@ -30,8 +30,7 @@ function addListAfterClick() {
 }
 
 function addListAfterKeypress(event) {
-	enterPressed === event.keyCode === 13;
-	if (inputLength() > 0 && enterPressed) {
+	if (inputLength() > 0 && event.key === 'Enter') {
 		createListElement();
 	}
 }
@@ -44,13 +43,13 @@ function deleteListItem(event) {
 
 
 // TODO add click event listener to enterButton that calls addListAfterClick
+enterButton.addEventListener('click', addListAfterClick);
 
 // TODO add keypress event listener to input that calls addListAfterKeypress
-
-
+input.addEventListener('keypress', addListAfterKeypress);
 
 Array.from(allDeleteButtons).forEach(button => {
 	// TODO add click event listener to button that calls deleteListItem
-
+		button.addEventListener('click', deleteListItem);
 });
 
